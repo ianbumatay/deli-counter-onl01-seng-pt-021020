@@ -2,13 +2,20 @@
 
 katz_deli =[]
 
+
 def line(array)
-  current_place = "The line is currently empty."
-  array.each.with_index(1) do |index, element|
-  current_place << "#{index}. #{element}"
+  if array.length == 0
+    puts "The line is currently empty."
+  else
+    message = "The line is currently:"
+
+  array.each_with_index do |value, index|
+    message += " #{index.to_i+1}. #{value}"
   end
-  puts current_place
+  puts "#{message}"
+  end
 end
+
 line(katz_deli)
 
 
@@ -22,6 +29,7 @@ end
 take_a_number(katz_deli, "Grace")
 take_a_number(katz_deli, "Tom")
 take_a_number(katz_deli, "Alan")
+
 
 
 def now_serving(array)
