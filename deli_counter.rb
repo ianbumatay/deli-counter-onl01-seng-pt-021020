@@ -12,12 +12,16 @@ end
 line(katz_deli)
 
 
-def take_a_number(line, new_person)
-  line.push << new_person
-  puts "Welcome, #{new_person}. You are number #{line.length} in line."
+def take_a_number(array, name)
+  array.push(name)
+  position = array.index(name)
+  puts "Welcome, #{name}. You are number #{array.index(name)+1} in line."
+  return name, position
 end
 
-take_a_number(katz_deli, "Ian")
+take_a_number(katz_deli, "Grace")
+take_a_number(katz_deli, "Tom")
+take_a_number(katz_deli, "Alan")
 
 
 def now_serving(array)
